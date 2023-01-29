@@ -1,5 +1,6 @@
 package com.waylau.spring.cloud.service;
 
+import com.waylau.spring.cloud.vo.SeniverseWeatherResponse;
 import com.waylau.spring.cloud.vo.WeatherResponse;
 
 /**
@@ -23,4 +24,11 @@ public interface WeatherDataService {
 	 * @return
 	 */
 	WeatherResponse getDataByCityName(String cityName);
+
+	/**
+	 * 根据城市名称查询天气数据
+	 * @param cityName
+	 * @return
+	 */
+	SeniverseWeatherResponse getSeniverseDataByCityName(String cityName);
 }

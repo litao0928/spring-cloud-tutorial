@@ -1,5 +1,6 @@
 package com.waylau.spring.cloud.controller;
 
+import com.waylau.spring.cloud.vo.SeniverseWeatherResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -30,6 +31,11 @@ public class WeatherController {
 	@GetMapping("/cityName/{cityName}")
 	public WeatherResponse getReportByCityName(@PathVariable("cityName") String cityName) {
 		return weatherDataService.getDataByCityName(cityName);
+	}
+
+	@GetMapping("/scityName/{cityName}")
+	public SeniverseWeatherResponse getSeniverseReportByCityName(@PathVariable("cityName") String cityName) {
+		return weatherDataService.getSeniverseDataByCityName(cityName);
 	}
 
 }
